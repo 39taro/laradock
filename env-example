@@ -5,13 +5,13 @@
 ### Paths #################################################
 
 # Point to the path of your applications code on your host
-APP_CODE_PATH_HOST=../
+APP_CODE_PATH_HOST=./app
 
 # Point to where the `APP_CODE_PATH_HOST` should be in the container. You may add flags to the path `:cached`, `:delegated`. When using Docker Sync add `:nocopy`
 APP_CODE_PATH_CONTAINER=/var/www:cached
 
 # Choose storage path on your machine. For all storage systems
-DATA_PATH_HOST=~/.laradock/data
+DATA_PATH_HOST=./data
 
 ### Drivers ################################################
 
@@ -27,7 +27,7 @@ NETWORKS_DRIVER=bridge
 COMPOSE_FILE=docker-compose.yml
 
 # Change the separator from : to ; on Windows
-COMPOSE_PATH_SEPARATOR=:
+COMPOSE_PATH_SEPARATOR=;
 
 # Define the prefix of container names. This is useful if you have multiple projects that use laradock to have seperate containers per project.
 COMPOSE_PROJECT_NAME=laradock
@@ -79,14 +79,14 @@ WORKSPACE_INSTALL_NODE=true
 WORKSPACE_NODE_VERSION=node
 WORKSPACE_NPM_REGISTRY=
 WORKSPACE_INSTALL_YARN=true
-WORKSPACE_YARN_VERSION=latest
+WORKSPACE_YARN_VERSION=1.9.4
 WORKSPACE_INSTALL_NPM_GULP=true
 WORKSPACE_INSTALL_NPM_BOWER=true
 WORKSPACE_INSTALL_NPM_VUE_CLI=true
 WORKSPACE_INSTALL_PHPREDIS=true
 WORKSPACE_INSTALL_WORKSPACE_SSH=false
 WORKSPACE_INSTALL_SUBVERSION=false
-WORKSPACE_INSTALL_XDEBUG=false
+WORKSPACE_INSTALL_XDEBUG=true
 WORKSPACE_INSTALL_PHPDBG=false
 WORKSPACE_INSTALL_SSH2=false
 WORKSPACE_INSTALL_LDAP=false
@@ -101,8 +101,8 @@ WORKSPACE_DRUSH_VERSION=8.1.17
 WORKSPACE_INSTALL_DRUPAL_CONSOLE=false
 WORKSPACE_INSTALL_AEROSPIKE=false
 WORKSPACE_INSTALL_V8JS=false
-WORKSPACE_INSTALL_LARAVEL_ENVOY=false
-WORKSPACE_INSTALL_LARAVEL_INSTALLER=false
+WORKSPACE_INSTALL_LARAVEL_ENVOY=true
+WORKSPACE_INSTALL_LARAVEL_INSTALLER=true
 WORKSPACE_INSTALL_DEPLOYER=false
 WORKSPACE_INSTALL_PRESTISSIMO=false
 WORKSPACE_INSTALL_LINUXBREW=false
@@ -120,7 +120,7 @@ WORKSPACE_INSTALL_IONCUBE=false
 WORKSPACE_PUID=1000
 WORKSPACE_PGID=1000
 WORKSPACE_CHROME_DRIVER_VERSION=2.32
-WORKSPACE_TIMEZONE=UTC
+WORKSPACE_TIMEZONE=Tokyo/Asia
 WORKSPACE_SSH_PORT=2222
 
 ### PHP_FPM ###############################################
@@ -134,8 +134,8 @@ PHP_FPM_INSTALL_IMAGEMAGICK=true
 PHP_FPM_INSTALL_OPCACHE=true
 PHP_FPM_INSTALL_IMAGE_OPTIMIZERS=true
 PHP_FPM_INSTALL_PHPREDIS=true
-PHP_FPM_INSTALL_MEMCACHED=false
-PHP_FPM_INSTALL_XDEBUG=false
+PHP_FPM_INSTALL_MEMCACHED=true
+PHP_FPM_INSTALL_XDEBUG=true
 PHP_FPM_INSTALL_PHPDBG=false
 PHP_FPM_INSTALL_IMAP=false
 PHP_FPM_INSTALL_MONGO=false
@@ -184,7 +184,7 @@ APACHE_DOCUMENT_ROOT=/var/www/
 
 ### MYSQL #################################################
 
-MYSQL_VERSION=latest
+MYSQL_VERSION=5.6
 MYSQL_DATABASE=default
 MYSQL_USER=default
 MYSQL_PASSWORD=secret
@@ -361,7 +361,7 @@ CADDY_HOST_HTTPS_PORT=443
 CADDY_HOST_LOG_PATH=./logs/caddy
 CADDY_CONFIG_PATH=./caddy/caddy
 
-### LARAVEL ECHO SERVER ###################################
+###  ECHO SERVER ###################################
 
 LARAVEL_ECHO_SERVER_PORT=6001
 
