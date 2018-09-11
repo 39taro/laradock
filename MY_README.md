@@ -14,6 +14,11 @@ docker-compose up -d workspace nginx php-fpm mysql phpmyadmin redis
 ```
 cd ./app
 ```
+
+## 更新履歴
+20180911 : mysql起動時にerrorになるのでmy.confに設定追加  
+https://github.com/farmOS/farmOS/issues/55
+
 start a development!
 ## 各servicesとPortまとめ
 
