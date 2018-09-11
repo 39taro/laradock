@@ -16,8 +16,10 @@ cd ./app
 ```
 
 ## 更新履歴
-20180911 : mysql起動時にerrorになるのでmy.confに設定追加  
+20180911_1 : mysql5.7起動時にerrorになるのでmy.confに設定追加  
 https://github.com/farmOS/farmOS/issues/55
+20180911_2 : mysqlをversion5.6に変更
+
 
 start a development!
 ## 各servicesとPortまとめ
